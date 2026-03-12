@@ -1,4 +1,14 @@
 import mysteryOfLove from '../assets/Sufjan_Stevens_-_Mystery_of_Love_(mp3.pm).mp3';
+import sunflowerBouquet from '../assets/sunflower_bouquet.png';
+import img854 from '../assets/IMG_854.jpeg';
+import photo1 from '../assets/photo1.jpeg';
+import photo3 from '../assets/photo3.jpeg';
+import photo5 from '../assets/photo5.jpeg';
+import photo7 from '../assets/photo7.jpeg';
+import photo8 from '../assets/photo8.jpeg';
+import photo9 from '../assets/photo9.jpeg';
+import photo13 from '../assets/photo13.jpeg';
+import photo15 from '../assets/photo15.jpeg';
 
 export const roomItems = [
   {
@@ -13,19 +23,23 @@ export const roomItems = [
     title: 'Our Memories',
     type: 'gallery',
     items: [
-      { src: '', caption: "I remember that time we were just laughing about nothing." },
-      { src: '', caption: "It's the simple moments that I treasure the most." },
-      { src: '', caption: "You make every memory special." },
-      { src: '', caption: "I love this picture of us." },
-      { src: '', caption: "Always smiling when I am with you." },
-      { src: '', caption: "To many more memories like this." }
+      { src: img854, caption: "I remember that time we were just laughing about nothing." },
+      { src: photo1, caption: "It's the simple moments that I treasure the most." },
+      { src: photo3, caption: "You make every memory special." },
+      { src: photo5, caption: "I love this picture of us." },
+      { src: photo7, caption: "Always smiling when I am with you." },
+      { src: photo8, caption: "To many more memories like this." },
+      { src: photo9, caption: "Every moment is precious." },
+      { src: photo13, caption: "Forever in my heart." },
+      { src: photo15, caption: "You are my favorite person." }
     ],
     position: { top: '30%', left: '20%' }
   },
   {
     id: 'vase',
     title: 'Sunflowers For You',
-    type: 'text',
+    type: 'image',
+    src: sunflowerBouquet,
     content: "Just like sunflowers always turn to the sun, my heart always turns toward you. You bring light into my world.",
     position: { top: '45%', right: '28%' }
   },

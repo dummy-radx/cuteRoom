@@ -74,6 +74,11 @@ export default function Modal({ item, onClose }) {
             <div className="letter-wrapper">
               <p className="letter-text">{item.content}</p>
             </div>
+          ) : item.type === 'image' ? (
+            <div className="gallery-item">
+              <img src={item.src} alt={item.title} className="gallery-image" />
+              <p className="modal-text">{item.content}</p>
+            </div>
           ) : item.type === 'audio' ? (
             <div className="audio-wrapper">
               <p className="modal-text">{item.content}</p>
