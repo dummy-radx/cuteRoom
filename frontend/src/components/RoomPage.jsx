@@ -4,11 +4,13 @@ import { roomItems } from '../data/content';
 import Modal from './Modal';
 import { 
   InteractiveObject, WindowSvg, FrameSvg, VaseSvg, 
-  BookcaseSvg, JarSvg, RadioSvg, TeddySvg, GiftSvg 
+  BookcaseSvg, JarSvg, RadioSvg, TeddySvg, GiftSvg,
+  LightSwitchSvg, CatSvg, EnvelopeSvg
 } from './SvgAssets';
 
 export default function RoomPage({ onBack }) {
   const [selectedItem, setSelectedItem] = useState(null);
+  const [isNightMode, setIsNightMode] = useState(false);
 
   const renderSvgMap = {
     window: <WindowSvg />,
@@ -18,11 +20,22 @@ export default function RoomPage({ onBack }) {
     jar: <JarSvg />,
     radio: <RadioSvg />,
     teddy: <TeddySvg />,
-    gift: <GiftSvg />
+    gift: <GiftSvg />,
+    switch: <LightSwitchSvg isOn={!isNightMode} />,
+    cat: <CatSvg />,
+    envelope: <EnvelopeSvg />
+  };
+
+  const handleItemClick = (item) => {
+    if (item.id === 'switch') {
+      setIsNightMode(!isNightMode);
+    } else {
+      setSelectedItem(item);
+    }
   };
 
   return (
-    <div className="room-container">
+    <div className={`room-container ${isNightMode ? 'night-mode' : ''}`}>
       <button onClick={onBack} className="back-button">←</button>
       
       <div className="room-header">
@@ -39,7 +52,7 @@ export default function RoomPage({ onBack }) {
             <InteractiveObject 
               key={item.id} 
               id={item.id}
-              onClick={() => setSelectedItem(item)}
+              onClick={() => handleItemClick(item)}
               style={item.position}
             >
               {renderSvgMap[item.id]}

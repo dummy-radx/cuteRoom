@@ -235,3 +235,45 @@ export const GiftSvg = () => (
     <circle cx="25" cy="12" r="3" fill="#eebd80" />
   </svg>
 );
+
+export const LightSwitchSvg = ({ isOn }) => (
+  <svg width="20" height="30" viewBox="0 0 20 30">
+    <rect x="2" y="2" width="16" height="26" fill="#f0ebca" rx="2" />
+    <rect x="5" y="8" width="10" height="14" fill="#d8c3a5" rx="1" />
+    <rect x="5" y={isOn ? 8 : 15} width="10" height="7" fill="#fff" rx="1" />
+  </svg>
+);
+
+export const CatSvg = () => (
+  <svg width="50" height="35" viewBox="0 0 50 35">
+    {/* Tail */}
+    <path d="M 40 25 C 50 25, 55 10, 45 15 Z" fill="#e0b467" />
+    {/* Body */}
+    <ellipse cx="25" cy="22" rx="18" ry="10" fill="#fce181" />
+    {/* Head */}
+    <circle cx="12" cy="18" r="9" fill="#e0b467" />
+    {/* Ears */}
+    <path d="M 6 12 L 4 4 L 10 9 Z" fill="#e0b467" />
+    <path d="M 17 11 L 20 2 L 13 8 Z" fill="#e0b467" />
+    {/* Eyes (Sleeping) */}
+    <path d="M 8 19 Q 10 21 12 19" fill="none" stroke="#5a4a42" strokeWidth="1" />
+    <path d="M 14 19 Q 16 21 18 19" fill="none" stroke="#5a4a42" strokeWidth="1" />
+    {/* Nose */}
+    <circle cx="13" cy="22" r="1.5" fill="#d1a3a4" />
+    {/* Zzz */}
+    <text x="20" y="8" fontSize="6" fill="#8c6d59" fontFamily="sans-serif" style={{ animation: 'float 2s infinite' }}>z</text>
+    <text x="25" y="4" fontSize="5" fill="#8c6d59" fontFamily="sans-serif" style={{ animation: 'float 2s infinite 1s' }}>z</text>
+  </svg>
+);
+
+export const EnvelopeSvg = () => (
+  <svg width="35" height="25" viewBox="0 0 35 25" transform="rotate(-15)">
+    {/* Shadow */}
+    <rect x="2" y="2" width="30" height="20" fill="#a78672" opacity="0.2" rx="1" />
+    <rect x="0" y="0" width="30" height="20" fill="#fdf9f0" rx="1" stroke="#d8c3a5" strokeWidth="1" />
+    <path d="M 0 0 L 15 12 L 30 0" fill="#f1e4ce" stroke="#d8c3a5" strokeWidth="1" />
+    {/* Little wax seal */}
+    <circle cx="15" cy="11" r="3" fill="#d1a3a4" />
+    <path d="M 14 10 L 16 12 M 16 10 L 14 12" stroke="#fff" strokeWidth="0.5" />
+  </svg>
+);

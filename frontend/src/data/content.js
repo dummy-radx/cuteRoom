@@ -1,3 +1,5 @@
+import mysteryOfLove from '../assets/Sufjan_Stevens_-_Mystery_of_Love_(mp3.pm).mp3';
+
 export const roomItems = [
   {
     id: 'window',
@@ -63,8 +65,9 @@ export const roomItems = [
   {
     id: 'radio',
     title: 'Music Box',
-    type: 'text',
-    content: "This plays our favorite song on loop. It reminds me of the rhythm of our hearts beating together.",
+    type: 'audio',
+    src: mysteryOfLove,
+    content: "This plays our favorite song on loop. It reminds me of the rhythm of our hearts beating together. (Click play to listen!)",
     position: { bottom: '15%', left: '15%' }
   },
   {
@@ -80,5 +83,23 @@ export const roomItems = [
     type: 'text',
     content: "You are the greatest surprise and most treasured gift I could ever ask for. Thank you for being you.",
     position: { bottom: '12%', right: '25%' }
+  },
+  {
+    id: 'switch',
+    position: { top: '40%', left: '8%' }
+  },
+  {
+    id: 'cat',
+    title: 'Sleepy Kitty',
+    type: 'text',
+    content: "Even the little kitty knows how comforting it is to just be near you.",
+    position: { bottom: '5%', left: '50%' }
+  },
+  {
+    id: 'envelope',
+    title: 'A Secret Letter',
+    type: 'letter',
+    content: "My dearest Sreeparna,\n\nI just wanted to take a moment to write you this little note. Creating this tiny space for you was just a small way to show how much you mean to me.\n\nYou light up my world in ways words can't fully express. Thank you for being the amazing, beautiful person you are.\n\nYours always,\nIshan ❤️",
+    position: { bottom: '6%', right: '12%' }
   }
 ];

@@ -164,3 +164,38 @@
   margin-bottom: 10px;
   min-height: auto;
 }
+
+.letter-wrapper {
+  background-color: #fdf6e3; /* parchment color */
+  padding: 30px 20px;
+  border-radius: 4px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+  border: 1px solid #eaddcf;
+}
+
+.letter-text {
+  font-family: 'Caveat', cursive; /* Hand-written look */
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: #4a3c31;
+  text-align: left;
+  white-space: pre-wrap; /* Preserves the line breaks in the string */
+  margin: 0;
+}
+
+.audio-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.custom-audio {
+  width: 100%;
+  max-width: 300px;
+  outline: none;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));
+}
+

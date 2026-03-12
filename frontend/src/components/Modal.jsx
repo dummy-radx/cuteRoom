@@ -70,6 +70,17 @@ export default function Modal({ item, onClose }) {
                 </button>
               </div>
             </div>
+          ) : item.type === 'letter' ? (
+            <div className="letter-wrapper">
+              <p className="letter-text">{item.content}</p>
+            </div>
+          ) : item.type === 'audio' ? (
+            <div className="audio-wrapper">
+              <p className="modal-text">{item.content}</p>
+              <audio controls autoPlay loop src={item.src} className="custom-audio">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
           ) : (
             <p className="modal-text">{item.content}</p>
           )}

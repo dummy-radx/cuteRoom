@@ -28,12 +28,12 @@ export default function LandingPage({ onEnter }) {
         </p>
         
         <button className="enter-button" onClick={onEnter}>
-          Enter My Room <span>♥</span>
+          Enter Room <span>♥</span>
         </button>
       </div>
       
       <div className="footer">
-        made with all my heart, just for you
+        made with all my heart, just for you - Ishan
       </div>
     </div>
   );
