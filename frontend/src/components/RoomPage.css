@@ -30,6 +30,8 @@
   text-align: center;
   padding-top: 20px;
   margin-bottom: 20px;
+  padding-left: 60px; /* Space for back button */
+  padding-right: 20px;
 }
 
 .room-header h1 {
@@ -56,6 +58,7 @@
 .room {
   width: 100%;
   max-width: 1000px;
+  min-height: 500px; /* Minimum height ensures elements don't crush */
   background-color: #f1e4ce; /* slightly darker wall color */
   border-radius: 20px;
   position: relative;
@@ -118,4 +121,113 @@
 .room-container.night-mode .room {
   /* Dim the room, shift to a warmer/blue hue slightly */
   filter: brightness(0.65) sepia(0.3) hue-rotate(340deg) saturate(1.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .room-header {
+    padding-left: 50px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .room-header h1 {
+    font-size: 2rem;
+  }
+
+  .room-header p {
+    font-size: 1rem;
+  }
+
+  .back-button {
+    top: 10px;
+    left: 10px;
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+  
+  .room-wrapper {
+    padding: 0 10px 20px 10px;
+  }
+
+  .room {
+    min-height: 450px;
+    border-radius: 12px;
+  }
+
+  /* Scale down interactive SVGs */
+  .interactive-item {
+    transform: scale(0.7) !important;
+    transform-origin: center center;
+  }
+
+  /* Wall Items Adjustment to prevent overlapping */
+  .item-window {
+    left: 5% !important;
+    top: 30% !important;
+  }
+  .item-frame {
+    left: 32% !important;
+    top: 25% !important; /* Move frame slightly up */
+  }
+  .item-vase {
+    right: 32% !important;
+    top: 40% !important;
+  }
+  .item-bookcase {
+    right: 5% !important;
+    top: 30% !important;
+  }
+  .item-switch {
+    left: 5% !important;
+    top: 50% !important;
+  }
+  .item-crystalBall {
+    left: 20% !important;
+    top: 55% !important;
+  }
+  .item-jar {
+    right: 5% !important;
+    top: 60% !important;
+  }
+
+  /* Floor Items Adjustment */
+  .item-radio {
+    left: 5% !important;
+    bottom: 20% !important;
+  }
+  .item-teddy {
+    left: 25% !important;
+    bottom: 10% !important;
+  }
+  .item-cat {
+    left: 48% !important;
+    bottom: 5% !important;
+  }
+  .item-guitar {
+    right: 30% !important;
+    bottom: 20% !important;
+  }
+  .item-gift {
+    right: 20% !important;
+    bottom: 8% !important;
+  }
+  .item-envelope {
+    right: 5% !important;
+    bottom: 15% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* For very small screens, scale down a bit more */
+  .interactive-item {
+    transform: scale(0.6) !important;
+  }
+  .room {
+    min-height: 380px;
+  }
+  .room-header h1 {
+    font-size: 1.8rem;
+  }
 }

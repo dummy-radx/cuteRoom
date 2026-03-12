@@ -7,11 +7,13 @@
   position: relative;
   overflow: hidden;
   text-align: center;
+  padding: 1rem; /* Added padding for smaller screens */
 }
 
 .landing-content {
   z-index: 2;
   max-width: 500px;
+  width: 100%; /* Ensure it spans available width */
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -83,6 +85,9 @@
   font-family: 'Quicksand', sans-serif;
   font-size: 0.9rem;
   color: #bbb; /* or a lighter brown */
+  text-align: center;
+  width: 100%;
+  padding: 0 1rem;
 }
 
 /* Floating flowers in background */
@@ -118,4 +123,50 @@
 @keyframes float {
   0% { transform: translateY(0px) rotate(0deg); }
   100% { transform: translateY(-20px) rotate(10deg); }
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 4rem;
+  }
+  .description {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 3rem;
+  }
+  
+  .subtitle {
+    font-size: 1.15rem;
+  }
+
+  .description {
+    font-size: 1.15rem;
+    margin-bottom: 30px;
+  }
+  
+  .landing-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .enter-button {
+    font-size: 1.25rem;
+    padding: 10px 24px;
+  }
+
+  /* Adjust background flowers so they don't cause horizontal scroll */
+  .flower.f1 {
+    left: 2%; /* Move inwards a bit */
+  }
+  .flower.f2 {
+    right: 5%;
+  }
+  .flower.f3 {
+    left: 2%;
+  }
 }
