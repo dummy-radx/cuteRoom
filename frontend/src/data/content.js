@@ -126,5 +126,24 @@ export const roomItems = [
     image: guitarImage,
     content: "A song that makes me think of you. (Click play to listen!)",
     position: { bottom: '25%', right: '40%' }
+  },
+  {
+    id: 'crystalBall',
+    title: 'Magic Crystal Ball',
+    type: 'generator',
+    items: [
+      "I love how your smile brightens up my darkest days.",
+      "I love the way you laugh at my silly jokes.",
+      "I love how safe I feel when I'm with you.",
+      "My favorite memory is when we were just laughing and blushing.",
+      "I love your passion and how much you care about the things you love.",
+      "I love the way your eyes sparkle when you talk about your favorite things.",
+      "I love how you always know exactly how to comfort me.",
+      "Every single conversation we have is a treasure to me.",
+      "You are the most beautiful person I know, inside and out.",
+      "I love just existing in the same space as you.",
+      "I love the warmth of your heart and the kindness you show everyone."
+    ],
+    position: { top: '55%', left: '30%' }
   }
 ];

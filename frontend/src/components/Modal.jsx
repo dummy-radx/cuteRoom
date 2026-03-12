@@ -92,7 +92,10 @@ export default function Modal({ item, onClose }) {
               </audio>
             </div>
           ) : (
-            <p className="modal-text">{item.content}</p>
+            <div className="text-wrapper" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+              <p className="modal-text">{item.content}</p>
+              {item.hint && <p className="modal-hint" style={{ marginTop: '15px', fontSize: '0.95rem', opacity: 0.7, fontStyle: 'italic', color: 'var(--text-brown)' }}>{item.hint}</p>}
+            </div>
           )}
         </div>
         

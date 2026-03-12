@@ -5,7 +5,7 @@ import Modal from './Modal';
 import { 
   InteractiveObject, WindowSvg, FrameSvg, VaseSvg, 
   BookcaseSvg, JarSvg, RadioSvg, TeddySvg, GiftSvg,
-  LightSwitchSvg, CatSvg, EnvelopeSvg, GuitarSvg
+  LightSwitchSvg, CatSvg, EnvelopeSvg, GuitarSvg, CrystalBallSvg
 } from './SvgAssets';
 
 export default function RoomPage({ onBack }) {
@@ -24,12 +24,21 @@ export default function RoomPage({ onBack }) {
     switch: <LightSwitchSvg isOn={!isNightMode} />,
     cat: <CatSvg />,
     envelope: <EnvelopeSvg />,
-    guitar: <GuitarSvg />
+    guitar: <GuitarSvg />,
+    crystalBall: <CrystalBallSvg />
   };
 
   const handleItemClick = (item) => {
     if (item.id === 'switch') {
       setIsNightMode(!isNightMode);
+    } else if (item.type === 'generator') {
+      const randomContent = item.items[Math.floor(Math.random() * item.items.length)];
+      setSelectedItem({ 
+        ...item, 
+        type: 'text', 
+        content: randomContent,
+        hint: "(Click the crystal ball again to see another message!)"
+      });
     } else {
       setSelectedItem(item);
     }

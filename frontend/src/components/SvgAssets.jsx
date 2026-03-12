@@ -311,3 +311,26 @@ export const GuitarSvg = () => (
     <line x1="23" y1="5" x2="23" y2="67" stroke="#fdf9f0" strokeWidth="0.5" />
   </svg>
 );
+
+export const CrystalBallSvg = () => (
+  <svg width="40" height="50" viewBox="0 0 40 50">
+    {/* Base */}
+    <path d="M 10 45 L 30 45 L 25 35 L 15 35 Z" fill="#cca683" />
+    <rect x="8" y="45" width="24" height="5" fill="#8c6d59" rx="2" />
+    {/* Crystal Ball */}
+    <circle cx="20" cy="20" r="16" fill="#bce6fa" opacity="0.6" />
+    <circle cx="20" cy="20" r="16" fill="url(#ballGradient)" opacity="0.8" />
+    {/* Defs for gradient */}
+    <defs>
+      <radialGradient id="ballGradient" cx="30%" cy="30%" r="70%">
+        <stop offset="0%" stopColor="#ffffff" stopOpacity="0.8" />
+        <stop offset="50%" stopColor="#bce6fa" stopOpacity="0.3" />
+        <stop offset="100%" stopColor="#88aec4" stopOpacity="0.6" />
+      </radialGradient>
+    </defs>
+    {/* Stars inside */}
+    <path d="M 15 15 L 16 18 L 19 19 L 16 20 L 15 23 L 14 20 L 11 19 L 14 18 Z" fill="#fce181" opacity="0.8" />
+    <circle cx="25" cy="12" r="1.5" fill="#fff" opacity="0.9" />
+    <circle cx="12" cy="25" r="1" fill="#fff" opacity="0.7" />
+  </svg>
+);
