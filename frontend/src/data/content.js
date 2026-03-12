@@ -25,9 +25,9 @@ export const roomItems = [
     title: 'Our Memories',
     type: 'gallery',
     items: [
-      { src: img854, caption: "I remember that time we were just laughing about nothing." },
+      { src: photo3, caption: "I remember that time we were just laughing and blushing." },
       { src: photo1, caption: "It's the simple moments that I treasure the most." },
-      { src: photo3, caption: "You make every memory special." },
+      { src: img854, caption: "You make every memory special." },
       { src: photo5, caption: "I love this picture of us." },
       { src: photo7, caption: "Always smiling when I am with you." },
       { src: photo8, caption: "To many more memories like this." },
