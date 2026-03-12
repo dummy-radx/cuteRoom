@@ -1,0 +1,92 @@
+.room-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.5rem;
+  background: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  z-index: 10;
+}
+
+.back-button:hover {
+  transform: scale(1.1);
+}
+
+.room-header {
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.room-header h1 {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 2.5rem;
+  color: var(--text-brown);
+  margin: 0;
+}
+
+.room-header p {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.1rem;
+  color: var(--text-brown);
+  opacity: 0.7;
+}
+
+.room-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px 40px 20px;
+}
+
+.room {
+  width: 100%;
+  max-width: 1000px;
+  background-color: #f1e4ce; /* slightly darker wall color */
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.floor {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  background-color: #d8c3a5;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 50px,
+    rgba(0,0,0,0.02) 50px,
+    rgba(0,0,0,0.02) 100px
+  ); /* Woody floor plank effect */
+}
+
+.rug {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 15%;
+  background-color: #d1a3a4;
+  border-radius: 50%;
+  opacity: 0.8;
+}
