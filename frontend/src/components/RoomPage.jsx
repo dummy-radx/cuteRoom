@@ -35,9 +35,9 @@ export default function RoomPage({ onBack }) {
       const randomContent = item.items[Math.floor(Math.random() * item.items.length)];
       setSelectedItem({ 
         ...item, 
-        type: 'text', 
+        type: 'generator_text', 
         content: randomContent,
-        hint: "(Click the crystal ball again to see another message!)"
+        hint: "(Click again to see another message!)"
       });
     } else {
       setSelectedItem(item);
@@ -75,6 +75,15 @@ export default function RoomPage({ onBack }) {
         <Modal 
           item={selectedItem} 
           onClose={() => setSelectedItem(null)} 
+          onRefresh={() => {
+            if (selectedItem.type === 'generator_text') {
+              const randomContent = selectedItem.items[Math.floor(Math.random() * selectedItem.items.length)];
+              setSelectedItem({
+                ...selectedItem,
+                content: randomContent
+              });
+            }
+          }}
         />
       )}
     </div>
