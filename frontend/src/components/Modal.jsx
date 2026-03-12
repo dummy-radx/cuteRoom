@@ -7,7 +7,9 @@ export default function Modal({ item, onClose }) {
   if (!item) return null;
 
   const isCarousel = item.type === 'carousel';
-  const totalItems = isCarousel ? item.items.length : 0;
+  const isGallery = item.type === 'gallery';
+  const isPaginated = isCarousel || isGallery;
+  const totalItems = isPaginated ? item.items.length : 0;
 
   const handleNext = () => {
     if (currentIndex < totalItems - 1) {
@@ -27,14 +29,26 @@ export default function Modal({ item, onClose }) {
         <button className="close-btn" onClick={onClose}>×</button>
         
         <div className="modal-header">
-          {/* We can put an icon here based on the item id later */}
           <h2 className="modal-title">{item.title}</h2>
         </div>
         
         <div className="modal-body">
-          {isCarousel ? (
+          {isPaginated ? (
             <div className="carousel-container">
-              <p className="modal-text">{item.items[currentIndex]}</p>
+              {isGallery ? (
+                <div className="gallery-item">
+                  {item.items[currentIndex].src ? (
+                    <img src={item.items[currentIndex].src} alt="Memory" className="gallery-image" />
+                  ) : (
+                    <div className="gallery-image-placeholder">
+                      <span>Image Placeholder</span>
+                    </div>
+                  )}
+                  <p className="modal-text gallery-caption">{item.items[currentIndex].caption}</p>
+                </div>
+              ) : (
+                <p className="modal-text">{item.items[currentIndex]}</p>
+              )}
               
               <div className="carousel-controls">
                 <button 

@@ -9,8 +9,15 @@ export const roomItems = [
   {
     id: 'frame',
     title: 'Our Memories',
-    type: 'text',
-    content: "I remember that time we were just laughing about nothing. It's the simple moments that I treasure the most. You make every memory special.",
+    type: 'gallery',
+    items: [
+      { src: '', caption: "I remember that time we were just laughing about nothing." },
+      { src: '', caption: "It's the simple moments that I treasure the most." },
+      { src: '', caption: "You make every memory special." },
+      { src: '', caption: "I love this picture of us." },
+      { src: '', caption: "Always smiling when I am with you." },
+      { src: '', caption: "To many more memories like this." }
+    ],
     position: { top: '30%', left: '20%' }
   },
   {
@@ -43,7 +50,13 @@ export const roomItems = [
       "Every day with you is a new adventure.",
       "You make even the mundane feel extraordinary.",
       "Your smile can brighten the darkest days.",
-      "I'm so lucky to have you in my life."
+      "I'm so lucky to have you in my life.",
+      "Just hearing your voice calms my soul.",
+      "I admire your passion and dedication to everything you do.",
+      "Thank you for always being my biggest supporter.",
+      "You have the most beautiful soul.",
+      "I love the way your eyes light up when you're excited.",
+      "You make me want to be a better person every single day."
     ],
     position: { top: '60%', right: '18%' }
   },
