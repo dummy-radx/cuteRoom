@@ -81,6 +81,11 @@ export default function Modal({ item, onClose }) {
             </div>
           ) : item.type === 'audio' ? (
             <div className="audio-wrapper">
+              {item.image && (
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}>
+                  <img src={item.image} alt={item.title} className="gallery-image" style={{ maxHeight: '250px', objectFit: 'contain' }} />
+                </div>
+              )}
               <p className="modal-text">{item.content}</p>
               <audio controls autoPlay loop src={item.src} className="custom-audio">
                 Your browser does not support the audio element.

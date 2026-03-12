@@ -5,7 +5,7 @@ import Modal from './Modal';
 import { 
   InteractiveObject, WindowSvg, FrameSvg, VaseSvg, 
   BookcaseSvg, JarSvg, RadioSvg, TeddySvg, GiftSvg,
-  LightSwitchSvg, CatSvg, EnvelopeSvg
+  LightSwitchSvg, CatSvg, EnvelopeSvg, GuitarSvg
 } from './SvgAssets';
 
 export default function RoomPage({ onBack }) {
@@ -23,7 +23,8 @@ export default function RoomPage({ onBack }) {
     gift: <GiftSvg />,
     switch: <LightSwitchSvg isOn={!isNightMode} />,
     cat: <CatSvg />,
-    envelope: <EnvelopeSvg />
+    envelope: <EnvelopeSvg />,
+    guitar: <GuitarSvg />
   };
 
   const handleItemClick = (item) => {

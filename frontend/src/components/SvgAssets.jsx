@@ -277,3 +277,37 @@ export const EnvelopeSvg = () => (
     <path d="M 14 10 L 16 12 M 16 10 L 14 12" stroke="#fff" strokeWidth="0.5" />
   </svg>
 );
+
+export const GuitarSvg = () => (
+  <svg width="40" height="90" viewBox="0 0 40 90">
+    {/* Guitar Stand */}
+    <path d="M 5 80 L 35 80 L 30 70 L 10 70 Z" fill="#5a4a42" />
+    <rect x="18" y="40" width="4" height="35" fill="#5a4a42" />
+    
+    {/* Guitar Body */}
+    <path d="M 19 75 C 34 75, 41 60, 31 50 C 36 40, 31 30, 21 30 C 11 30, 6 40, 11 50 C 1 60, 4 75, 19 75 Z" fill="#cca683" stroke="#8c6d59" strokeWidth="1.5" />
+    {/* Sound Hole */}
+    <circle cx="21" cy="51" r="6" fill="#4a3b32" />
+    {/* Pickguard */}
+    <path d="M 21 58 Q 30 60 28 68 Q 25 72 21 72 Z" fill="#8c6d59" opacity="0.7" />
+    {/* Bridge */}
+    <rect x="14" y="66" width="14" height="4" fill="#4a3b32" rx="1" />
+    
+    {/* Neck */}
+    <rect x="18" y="12" width="6" height="37" fill="#8c6d59" />
+    
+    {/* Headstock */}
+    <rect x="16" y="2" width="10" height="12" fill="#cca683" rx="2" />
+    
+    {/* Tuning Pegs */}
+    <circle cx="14" cy="5" r="1.5" fill="#f0ebca" />
+    <circle cx="14" cy="9" r="1.5" fill="#f0ebca" />
+    <circle cx="28" cy="5" r="1.5" fill="#f0ebca" />
+    <circle cx="28" cy="9" r="1.5" fill="#f0ebca" />
+    
+    {/* Strings */}
+    <line x1="19" y1="5" x2="19" y2="67" stroke="#fdf9f0" strokeWidth="0.5" />
+    <line x1="21" y1="5" x2="21" y2="67" stroke="#fdf9f0" strokeWidth="0.5" />
+    <line x1="23" y1="5" x2="23" y2="67" stroke="#fdf9f0" strokeWidth="0.5" />
+  </svg>
+);

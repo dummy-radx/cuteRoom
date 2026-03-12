@@ -9,6 +9,8 @@ import photo8 from '../assets/photo8.jpeg';
 import photo9 from '../assets/photo9.jpeg';
 import photo13 from '../assets/photo13.jpeg';
 import photo15 from '../assets/photo15.jpeg';
+import guitarImage from '../assets/guitar_on_stand.png';
+import theBeatles from '../assets/The Beatles - While My Guitar Gently Weeps.mp3';
 
 export const roomItems = [
   {
@@ -115,5 +117,14 @@ export const roomItems = [
     type: 'letter',
     content: "My dearest Sreeparna,\n\nI just wanted to take a moment to write you this little note. Creating this tiny space for you was just a small way to show how much you mean to me.\n\nYou light up my world in ways words can't fully express. Thank you for being the amazing, beautiful person you are.\n\nYours always,\nIshan ❤️",
     position: { bottom: '6%', right: '12%' }
+  },
+  {
+    id: 'guitar',
+    title: 'A Song For You',
+    type: 'audio',
+    src: theBeatles,
+    image: guitarImage,
+    content: "A song that makes me think of you. (Click play to listen!)",
+    position: { bottom: '25%', right: '40%' }
   }
 ];
