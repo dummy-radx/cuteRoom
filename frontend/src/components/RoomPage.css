@@ -123,7 +123,12 @@
   filter: brightness(0.65) sepia(0.3) hue-rotate(340deg) saturate(1.2);
 }
 
-/* Responsive Styles */
+/* =============================================
+   RESPONSIVE STYLES
+   Floor = bottom 30% of room. Items on the floor
+   should use bottom values 5%–28%.
+   Wall items should use top values up to ~65%.
+   ============================================= */
 @media (max-width: 768px) {
   .room-header {
     padding-left: 50px;
@@ -162,72 +167,104 @@
     transform-origin: center center;
   }
 
-  /* Wall Items Adjustment to prevent overlapping */
+  /* ── WALL ITEMS ── */
   .item-window {
     left: 5% !important;
-    top: 30% !important;
+    top: 28% !important;
   }
   .item-frame {
     left: 32% !important;
-    top: 25% !important; /* Move frame slightly up */
+    top: 22% !important;
   }
   .item-vase {
-    right: 32% !important;
-    top: 40% !important;
+    left: 52% !important;
+    right: auto !important;
+    top: 36% !important;
   }
   .item-bookcase {
-    right: 5% !important;
-    top: 30% !important;
+    right: 3% !important;
+    top: 25% !important;
   }
   .item-switch {
-    left: 5% !important;
-    top: 50% !important;
+    left: 3% !important;
+    top: 52% !important;
   }
   .item-crystalBall {
-    left: 20% !important;
-    top: 55% !important;
+    left: 62% !important;
+    top: 52% !important;
   }
+  /* Jar: push down to sit on the floor line */
   .item-jar {
-    right: 5% !important;
-    top: 60% !important;
+    right: 3% !important;
+    top: auto !important;
+    bottom: 28% !important;
   }
 
-  /* Floor Items Adjustment */
+  /* ── FLOOR ITEMS ── */
+  /* Left column: radio, teddy */
   .item-radio {
-    left: 5% !important;
-    bottom: 20% !important;
+    left: 3% !important;
+    bottom: 18% !important;
   }
   .item-teddy {
-    left: 25% !important;
-    bottom: 10% !important;
-  }
-  .item-cat {
-    left: 48% !important;
-    bottom: 5% !important;
-  }
-  .item-guitar {
-    right: 30% !important;
-    bottom: 20% !important;
-  }
-  .item-gift {
-    right: 20% !important;
+    left: 20% !important;
     bottom: 8% !important;
   }
+  /* Center: cat */
+  .item-cat {
+    left: 44% !important;
+    bottom: 4% !important;
+  }
+  /* Right area: guitar, gift, envelope — spaced out */
+  .item-guitar {
+    right: 28% !important;
+    bottom: 18% !important;
+  }
+  .item-gift {
+    right: 25% !important;
+    bottom: 6% !important;
+  }
   .item-envelope {
-    right: 5% !important;
-    bottom: 15% !important;
+    right: 3% !important;
+    bottom: 14% !important;
+  }
+
+  /* ── NEW ITEMS ── */
+  /* Bed: left side of room, sitting on the floor line */
+  .item-bed {
+    left: 3% !important;
+    top: auto !important;
+    bottom: 26% !important;
+  }
+  /* Laptop: far right, on the floor, away from gift+envelope */
+  .item-laptop {
+    right: 2% !important;
+    bottom: 10% !important;
   }
 }
 
 @media (max-width: 480px) {
-  /* For very small screens, scale down a bit more */
   .interactive-item {
-    transform: scale(0.6) !important;
+    transform: scale(0.55) !important;
+    transform-origin: center center;
   }
   .room {
     min-height: 380px;
   }
   .room-header h1 {
     font-size: 1.8rem;
+  }
+  /* Extra nudges at very small sizes */
+  .item-bed {
+    left: 2% !important;
+    bottom: 22% !important;
+  }
+  .item-laptop {
+    right: 0% !important;
+    bottom: 3% !important;
+  }
+  .item-jar {
+    right: 2% !important;
+    bottom: 25% !important;
   }
 }

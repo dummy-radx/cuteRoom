@@ -334,3 +334,127 @@ export const CrystalBallSvg = () => (
     <circle cx="12" cy="25" r="1" fill="#fff" opacity="0.7" />
   </svg>
 );
+
+export const BedSvg = () => (
+  <svg width="200" height="140" viewBox="0 0 200 140">
+    <defs>
+      <linearGradient id="bedFrameGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stopColor="#8c6d59" />
+        <stop offset="100%" stopColor="#5a4a42" />
+      </linearGradient>
+      <linearGradient id="comforterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stopColor="#f8d7da" />
+        <stop offset="100%" stopColor="#e8baba" />
+      </linearGradient>
+      <linearGradient id="pillowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stopColor="#ffffff" />
+        <stop offset="100%" stopColor="#f0f0f0" />
+      </linearGradient>
+      <pattern id="duvetPattern" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+        <path d="M 0 15 Q 7.5 7.5 15 15 Q 22.5 22.5 30 15" fill="none" stroke="#d1a3a4" strokeWidth="0.5" opacity="0.2" />
+        <path d="M 0 30 Q 7.5 22.5 15 30 Q 22.5 37.5 30 30" fill="none" stroke="#d1a3a4" strokeWidth="0.5" opacity="0.2" />
+      </pattern>
+      <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+        <feOffset dx="0" dy="2" result="offsetblur" />
+        <feComponentTransfer>
+          <feFuncA type="linear" slope="0.2" />
+        </feComponentTransfer>
+        <feMerge>
+          <feMergeNode />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    </defs>
+
+    {/* Back legs */}
+    <rect x="35" y="50" width="10" height="60" fill="#4a3b32" rx="2" />
+    <rect x="155" y="50" width="10" height="60" fill="#4a3b32" rx="2" />
+
+    {/* Headboard */}
+    <path d="M 25 90 L 25 40 Q 25 15 100 15 Q 175 15 175 40 L 175 90 Z" fill="url(#bedFrameGrad)" filter="url(#softShadow)" />
+    {/* Decorative inner panel */}
+    <path d="M 40 40 Q 100 30 160 40 L 160 80 Q 100 70 40 80 Z" fill="#cca683" opacity="0.3" />
+    {/* Headboard detail */}
+    <circle cx="100" cy="35" r="8" fill="none" stroke="#cca683" strokeWidth="1" opacity="0.5" />
+
+    {/* Bed Main Body Area */}
+    <rect x="20" y="85" width="160" height="40" rx="8" fill="#6d5445" />
+    
+    {/* Mattress Edge */}
+    <rect x="25" y="80" width="150" height="15" rx="5" fill="#ffffff" />
+
+    {/* Comforter / Duvet */}
+    <rect x="25" y="90" width="150" height="45" rx="8" fill="url(#comforterGrad)" filter="url(#softShadow)" />
+    <rect x="25" y="90" width="150" height="45" rx="8" fill="url(#duvetPattern)" />
+    
+    {/* Folded duvet top part */}
+    <path d="M 25 90 C 70 80, 130 80, 175 90 L 175 105 C 130 95, 70 95, 25 105 Z" fill="#fce181" opacity="0.9" />
+    
+    {/* Pillows */}
+    <g filter="url(#softShadow)">
+      <rect x="40" y="65" width="55" height="30" rx="12" fill="url(#pillowGrad)" />
+      <rect x="105" y="65" width="55" height="30" rx="12" fill="url(#pillowGrad)" />
+      {/* Decorative seams/creases */}
+      <path d="M 50 80 Q 67 75 85 80" fill="none" stroke="#e0e0e0" strokeWidth="1.5" />
+      <path d="M 115 80 Q 132 75 150 80" fill="none" stroke="#e0e0e0" strokeWidth="1.5" />
+    </g>
+
+    {/* Front legs */}
+    <rect x="25" y="125" width="12" height="10" fill="#4a3b32" rx="2" />
+    <rect x="163" y="125" width="12" height="10" fill="#4a3b32" rx="2" />
+
+    {/* Small heart accent on the comforter */}
+    <path d="M 100 118 C 100 115, 97 114, 97 116 C 97 118, 100 121, 100 121 C 100 121, 103 118, 103 116 C 103 114, 100 115, 100 118 Z" fill="#d1a3a4" opacity="0.7" />
+  </svg>
+);
+
+export const LaptopSvg = () => (
+  <svg width="90" height="70" viewBox="0 0 90 70">
+    {/* Screen lid */}
+    <rect x="10" y="5" width="70" height="45" fill="#3d3d3d" rx="4" />
+    {/* Screen */}
+    <rect x="13" y="8" width="64" height="39" fill="#1a1a2e" rx="2" />
+    {/* Code line 1 */}
+    <rect x="16" y="12" width="12" height="3" fill="#c792ea" rx="1" />
+    <rect x="30" y="12" width="18" height="3" fill="#82aaff" rx="1" />
+    <rect x="50" y="12" width="8" height="3" fill="#c3e88d" rx="1" />
+    {/* Code line 2 */}
+    <rect x="18" y="18" width="8" height="3" fill="#f78c6c" rx="1" />
+    <rect x="28" y="18" width="22" height="3" fill="#eeffff" rx="1" />
+    <rect x="52" y="18" width="10" height="3" fill="#c3e88d" rx="1" />
+    {/* Code line 3 */}
+    <rect x="18" y="24" width="15" height="3" fill="#82aaff" rx="1" />
+    <rect x="35" y="24" width="6" height="3" fill="#ff5370" rx="1" />
+    <rect x="43" y="24" width="12" height="3" fill="#eeffff" rx="1" />
+    {/* Code line 4 */}
+    <rect x="18" y="30" width="10" height="3" fill="#c792ea" rx="1" />
+    <rect x="30" y="30" width="16" height="3" fill="#f78c6c" rx="1" />
+    {/* Blinking cursor */}
+    <rect x="48" y="30" width="2" height="3" fill="#eeffff" rx="0.5">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
+    </rect>
+    {/* Code line 5 - error in red */}
+    <rect x="18" y="36" width="8" height="3" fill="#ff5370" rx="1" />
+    <rect x="28" y="36" width="25" height="3" fill="#ff5370" rx="1" opacity="0.7" />
+    {/* Squiggly error underline */}
+    <path d="M 18 40 Q 22 42 26 40 Q 30 38 34 40 Q 38 42 42 40" stroke="#ff5370" strokeWidth="0.8" fill="none" />
+    {/* Hinge */}
+    <rect x="10" y="49" width="70" height="3" fill="#2a2a2a" rx="1" />
+    {/* Keyboard base */}
+    <rect x="5" y="52" width="80" height="14" fill="#4d4d4d" rx="3" />
+    {/* Keys row 1 */}
+    <rect x="10" y="55" width="6" height="4" fill="#666" rx="1" />
+    <rect x="18" y="55" width="6" height="4" fill="#666" rx="1" />
+    <rect x="26" y="55" width="6" height="4" fill="#666" rx="1" />
+    <rect x="34" y="55" width="6" height="4" fill="#666" rx="1" />
+    <rect x="42" y="55" width="6" height="4" fill="#666" rx="1" />
+    <rect x="50" y="55" width="6" height="4" fill="#666" rx="1" />
+    <rect x="58" y="55" width="6" height="4" fill="#666" rx="1" />
+    <rect x="66" y="55" width="14" height="4" fill="#666" rx="1" />
+    {/* Spacebar */}
+    <rect x="22" y="61" width="46" height="3" fill="#555" rx="1" />
+    {/* Trackpad */}
+    <rect x="32" y="64" width="26" height="2" fill="#5a5a5a" rx="1" />
+  </svg>
+);

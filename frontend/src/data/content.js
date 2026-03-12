@@ -145,5 +145,31 @@ export const roomItems = [
       "I love the warmth of your heart and the kindness you show everyone."
     ],
     position: { top: '55%', left: '30%' }
+  },
+  {
+    id: 'bed',
+    title: 'Come Cuddle~ 🛏️',
+    type: 'carousel',
+    items: [
+      "Let's cuddle, cutu~ I promise I'll be the big spoon 🥄💕",
+      "Bed is empty without you. Come here and let me hold you tight 🤗",
+      "Warning: Cuddling with me may cause excessive giggles, warmth, and an inability to leave 😏",
+      "I'd share my blanket with you… that's how much I love you 🥹",
+      "You + me + this bed = the best nap ever imagined 💤💕",
+      "Psst… I saved a pillow fort spot just for you 🏰",
+      "Unpopular opinion: the best place in the world is right here, next to you 🥺",
+      "I'd stay up all night just talking to you, but I'd also love to fall asleep holding you 🌙",
+      "You make even sleep feel like an adventure 💛",
+      "Between you and me, all my best dreams have you in them 💭❤️"
+    ],
+    position: { top: '54%', left: '1%' }
+  },
+  {
+    id: 'laptop',
+    title: 'God Forbid 💻😩',
+    type: 'text',
+    content: "God forbid a man tries to fix his bug... 😜",
+    position: { bottom: '5%', right: '8%' }
+
   }
 ];

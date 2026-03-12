@@ -105,7 +105,7 @@ export default function Modal({ item, onClose, onRefresh }) {
                 if (item.type === 'generator_text' && onRefresh) onRefresh();
               }}
             >
-              <p className="modal-text">{item.content}</p>
+              <p className="modal-text" style={{ whiteSpace: 'pre-wrap' }}>{item.content}</p>
               {item.hint && <p className="modal-hint" style={{ marginTop: '15px', fontSize: '0.95rem', opacity: 0.7, fontStyle: 'italic', color: 'var(--text-brown)' }}>{item.hint}</p>}
             </div>
           )}
